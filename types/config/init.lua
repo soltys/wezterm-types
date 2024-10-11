@@ -317,7 +317,7 @@
 --     -- to the terminal.
 ---@field use_ime bool
 ---@field xim_im_name String
----@field ime_preedit_rendering ImePreeditRendering
+---@field ime_preedit_rendering "Builtin" | "System" Control IME preedit rendering. IME preedit is an area that is used to display the string being preedited in IME.
 ---@field use_dead_keys bool
 ---@field launch_menu SpawnCommand[]
 ---@field use_box_model_render bool
