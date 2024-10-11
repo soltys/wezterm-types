@@ -417,6 +417,11 @@ local FontAttributes = {
 ---@field segment_size? number
 ---@field segment_smoothness? number
 
+---@class HsbTransform
+---@field hue number
+---@field saturation number
+---@field brightness number
+
 ---@class ColorSchemeMetaData
 ---@field name? string
 ---@field author? string
