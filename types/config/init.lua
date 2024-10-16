@@ -372,7 +372,7 @@
 ---@field default_workspace String
 ---@field xcursor_theme String
 ---@field xcursor_size u32
----@field key_map_preference KeyMapPreference
+---@field key_map_preference "Mapped" | "Physical" Controls how keys without an explicit phys: or mapped: prefix are treated.
 ---@field quote_dropped_files DroppedFileQuoting
 ---@field ui_key_cap_rendering UIKeyCapRendering
 ---@field palette_max_key_assigments_for_action usize
