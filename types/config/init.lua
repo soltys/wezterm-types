@@ -276,7 +276,7 @@
 ---@field cursor_blink_ease_out EasingFunction
 ---@field animation_fps u8
 ---@field force_reverse_video_cursor bool
----@field default_cursor_style DefaultCursorStyle
+---@field default_cursor_style "SteadyBlock" | "BlinkingBlock" | "SteadyUnderline" | "BlinkingUnderline" | "SteadyBar" | "BlinkingBar"
 --     -- Specifies the default cursor style.  various escape sequences
 --     -- can override the default style in different situations (eg:
 --     -- an editor can change it depending on the mode), but this value
