@@ -436,7 +436,6 @@ local FontAttributes = {
 ---@alias CopyMode 'AcceptPattern' | 'ClearPattern' | 'ClearSelectionMode' | 'Close' | 'CycleMatchType' | 'EditPattern' | 'MoveBackwardSemanticZone' | { MoveBackwardSemanticZoneOfType: SemanticZoneType } | 'MoveBackwardWord' | 'MoveDown' | 'MoveForwardSemanticZone' | { MoveForwardSemanticZoneOfType: SemanticZoneType } | 'MoveForwardWord' | 'MoveForwardWordEnd' | 'MoveLeft' | 'MoveRight' | 'MoveToEndOfLineContent' | 'MoveToScrollbackBottom' | 'MoveToScrollbackTop' | 'MoveToSelectionOtherEnd' | 'MoveToSelectionOtherEndHoriz' | 'MoveToStartOfLine' | 'MoveToStartOfLineContent' | 'MoveToStartOfNextLine' | 'MoveToViewportBottom' | 'MoveToViewportMiddle' | 'MoveToViewportTop' | 'MoveUp' | 'NextMatch' | 'NextMatchPage' | 'PriorMatch' | 'PriorMatchPage' | { SetSelectionMode: SelectionMode | 'SemanticZone' }
 ---@alias CursorStyle 'BlinkingBlock' | 'SteadyBlock' | 'BlinkingUnderline' | 'SteadyUnderline' | 'BlinkingBar' | 'SteadyBar'
 ---@alias Direction 'Left' | 'Right' | 'Up' | 'Down' | 'Next' | 'Prev'
----@alias EasingFunction 'Linear' | 'Ease' | 'EaseIn' | 'EaseInOut' | 'EaseOut' | { CubicBezier: number[] } | 'Constant'
 ---@alias FreetypeLoadTarget 'Normal' | 'Light' | 'Mono' | 'HorizontalLcd'
 ---@alias SelectionMode 'Cell' | 'Word' | 'Line' | 'Block'
 ---@alias SemanticZoneType 'Prompt' | 'Input' | 'Output'
