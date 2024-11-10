@@ -22,3 +22,9 @@ as a package manager, install this together with
   },
 }
 ```
+
+Then on your Wezterm configuration file, cast a type to the required module:
+
+```lua
+local wezterm = require('wezterm') --[[@as Wezterm]]
+```
