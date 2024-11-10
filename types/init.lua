@@ -163,25 +163,25 @@ local Palette = {
   tab_bar = {
     -- The color of the strip that goes along the top of the window
     -- (does not apply when fancy tab bar is in use)
-    background = "#0b0022",
+    background = '#0b0022',
 
     ---@type TabBarColor
     -- The active tab is the one that has focus in the window
     active_tab = {
       -- The color of the background area for the tab
-      bg_color = "#2b2042",
+      bg_color = '#2b2042',
       -- The color of the text for the tab
-      fg_color = "#c0c0c0",
+      fg_color = '#c0c0c0',
 
       -- Specify whether you want "Half", "Normal" or "Bold" intensity for the
       -- label shown for this tab.
       -- The default is "Normal"
-      intensity = "Normal",
+      intensity = 'Normal',
 
       -- Specify whether you want "None", "Single" or "Double" underline for
       -- label shown for this tab.
       -- The default is "None"
-      underline = "None",
+      underline = 'None',
 
       -- Specify whether you want the text to be italic (true) or not (false)
       -- for this tab.  The default is false.
@@ -195,32 +195,32 @@ local Palette = {
     ---@type TabBarColor
     -- Inactive tabs are the tabs that do not have focus
     inactive_tab = {
-      bg_color = "#1b1032",
-      fg_color = "#808080",
+      bg_color = '#1b1032',
+      fg_color = '#808080',
     },
 
     ---@type TabBarColor
     -- You can configure some alternate styling when the mouse pointer
     -- moves over inactive tabs
     inactive_tab_hover = {
-      bg_color = "#3b3052",
-      fg_color = "#909090",
+      bg_color = '#3b3052',
+      fg_color = '#909090',
       italic = true,
     },
 
     ---@type TabBarColor
     -- The new tab button that let you create new tabs
     new_tab = {
-      bg_color = "#1b1032",
-      fg_color = "#808080",
+      bg_color = '#1b1032',
+      fg_color = '#808080',
     },
 
     ---@type TabBarColor
     -- You can configure some alternate styling when the mouse pointer
     -- moves over the new tab button
     new_tab_hover = {
-      bg_color = "#3b3052",
-      fg_color = "#909090",
+      bg_color = '#3b3052',
+      fg_color = '#909090',
       italic = true,
     },
   },
@@ -237,29 +237,29 @@ local Palette = {
 ---@alias Fonts {fonts: FontAttributes[]}
 
 ---@class FontAttributes
----@field is_fallback boolean
----@field is_synthetic boolean
----@field harfbuzz_features string[]
----@field assume_emoji_presentation boolean
----@field scale number
+---@field is_fallback? boolean
+---@field is_synthetic? boolean
+---@field harfbuzz_features? string[]
+---@field assume_emoji_presentation? boolean
+---@field scale? number
 local FontAttributes = {
   -- The font family name
-  family = "JetBrains Mono",
+  family = 'JetBrains Mono',
   ---@type FontWeight
   -- Whether the font should be a bold variant
-  weight = "Regular",
+  weight = 'Regular',
   ---@type FontStretch
-  stretch = "Normal",
+  stretch = 'Normal',
   ---@type FontStyle
   -- Whether the font should be an italic variant
-  style = "Normal",
+  style = 'Normal',
   ---@type FreeTypeLoadTarget
-  freetype_load_target = "Normal",
+  freetype_load_target = 'Normal',
   ---@type FreeTypeLoadTarget
-  freetype_render_target = "Normal",
+  freetype_render_target = 'Normal',
   ---@type FreeTypeLoadFlags
   -- you can combine the flags like 'NO_HINTING|MONOCHROME' -- probably would not want to
-  freetype_load_flags = "DEFAUlT",
+  freetype_load_flags = 'DEFAUlT',
 }
 
 ---@class WindowFrameConfig
@@ -351,7 +351,7 @@ local FontAttributes = {
 -- Show time since last response when waiting for a response. It is recommended to use <https://wezfurlong.org/wezterm/config/lua/pane/get_metadata.html#since_last_response_ms> instead.
 
 ---@class LeaderKey :KeyNoAction
----@field timeout_milliseconds u64
+---@field timeout_milliseconds? u64 - `leader` stays active until a keypress is registered (whether it matches a key binding or not), or until it has been active for the duration specified by `timeout_milliseconds`, at which point it will automatically cancel itself.
 
 ---@class HyperLinkRule
 ---@field regex string The regular expression to match
