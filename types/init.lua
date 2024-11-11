@@ -158,72 +158,72 @@
 ---@field quick_select_match_fg ColorSpec
 ---@field quick_select_match_bg ColorSpec
 local Palette = {
-	---@class TabBar :TabBarColors
-	--  Configure the color and styling for the tab bar
-	tab_bar = {
-		-- The color of the strip that goes along the top of the window
-		-- (does not apply when fancy tab bar is in use)
-		background = "#0b0022",
+  ---@class TabBar :TabBarColors
+  --  Configure the color and styling for the tab bar
+  tab_bar = {
+    -- The color of the strip that goes along the top of the window
+    -- (does not apply when fancy tab bar is in use)
+    background = '#0b0022',
 
-		---@type TabBarColor
-		-- The active tab is the one that has focus in the window
-		active_tab = {
-			-- The color of the background area for the tab
-			bg_color = "#2b2042",
-			-- The color of the text for the tab
-			fg_color = "#c0c0c0",
+    ---@type TabBarColor
+    -- The active tab is the one that has focus in the window
+    active_tab = {
+      -- The color of the background area for the tab
+      bg_color = '#2b2042',
+      -- The color of the text for the tab
+      fg_color = '#c0c0c0',
 
-			-- Specify whether you want "Half", "Normal" or "Bold" intensity for the
-			-- label shown for this tab.
-			-- The default is "Normal"
-			intensity = "Normal",
+      -- Specify whether you want "Half", "Normal" or "Bold" intensity for the
+      -- label shown for this tab.
+      -- The default is "Normal"
+      intensity = 'Normal',
 
-			-- Specify whether you want "None", "Single" or "Double" underline for
-			-- label shown for this tab.
-			-- The default is "None"
-			underline = "None",
+      -- Specify whether you want "None", "Single" or "Double" underline for
+      -- label shown for this tab.
+      -- The default is "None"
+      underline = 'None',
 
-			-- Specify whether you want the text to be italic (true) or not (false)
-			-- for this tab.  The default is false.
-			italic = false,
+      -- Specify whether you want the text to be italic (true) or not (false)
+      -- for this tab.  The default is false.
+      italic = false,
 
-			-- Specify whether you want the text to be rendered with strikethrough (true)
-			-- or not for this tab.  The default is false.
-			strikethrough = false,
-		},
+      -- Specify whether you want the text to be rendered with strikethrough (true)
+      -- or not for this tab.  The default is false.
+      strikethrough = false,
+    },
 
-		---@type TabBarColor
-		-- Inactive tabs are the tabs that do not have focus
-		inactive_tab = {
-			bg_color = "#1b1032",
-			fg_color = "#808080",
-		},
+    ---@type TabBarColor
+    -- Inactive tabs are the tabs that do not have focus
+    inactive_tab = {
+      bg_color = '#1b1032',
+      fg_color = '#808080',
+    },
 
-		---@type TabBarColor
-		-- You can configure some alternate styling when the mouse pointer
-		-- moves over inactive tabs
-		inactive_tab_hover = {
-			bg_color = "#3b3052",
-			fg_color = "#909090",
-			italic = true,
-		},
+    ---@type TabBarColor
+    -- You can configure some alternate styling when the mouse pointer
+    -- moves over inactive tabs
+    inactive_tab_hover = {
+      bg_color = '#3b3052',
+      fg_color = '#909090',
+      italic = true,
+    },
 
-		---@type TabBarColor
-		-- The new tab button that let you create new tabs
-		new_tab = {
-			bg_color = "#1b1032",
-			fg_color = "#808080",
-		},
+    ---@type TabBarColor
+    -- The new tab button that let you create new tabs
+    new_tab = {
+      bg_color = '#1b1032',
+      fg_color = '#808080',
+    },
 
-		---@type TabBarColor
-		-- You can configure some alternate styling when the mouse pointer
-		-- moves over the new tab button
-		new_tab_hover = {
-			bg_color = "#3b3052",
-			fg_color = "#909090",
-			italic = true,
-		},
-	},
+    ---@type TabBarColor
+    -- You can configure some alternate styling when the mouse pointer
+    -- moves over the new tab button
+    new_tab_hover = {
+      bg_color = '#3b3052',
+      fg_color = '#909090',
+      italic = true,
+    },
+  },
 
 }
 
@@ -244,23 +244,23 @@ local Palette = {
 ---@field assume_emoji_presentation? boolean
 ---@field scale? number
 local FontAttributes = {
-	-- The font family name
-	family = "JetBrains Mono",
-	---@type FontWeight
-	-- Whether the font should be a bold variant
-	weight = "Regular",
-	---@type FontStretch
-	stretch = "Normal",
-	---@type FontStyle
-	-- Whether the font should be an italic variant
-	style = "Normal",
-	---@type FreeTypeLoadTarget
-	freetype_load_target = "Normal",
-	---@type FreeTypeLoadTarget
-	freetype_render_target = "Normal",
-	---@type FreeTypeLoadFlags
-	-- you can combine the flags like 'NO_HINTING|MONOCHROME' -- probably would not want to
-	freetype_load_flags = "DEFAUlT",
+  -- The font family name
+  family = 'JetBrains Mono',
+  ---@type FontWeight
+  -- Whether the font should be a bold variant
+  weight = 'Regular',
+  ---@type FontStretch
+  stretch = 'Normal',
+  ---@type FontStyle
+  -- Whether the font should be an italic variant
+  style = 'Normal',
+  ---@type FreeTypeLoadTarget
+  freetype_load_target = 'Normal',
+  ---@type FreeTypeLoadTarget
+  freetype_render_target = 'Normal',
+  ---@type FreeTypeLoadFlags
+  -- you can combine the flags like 'NO_HINTING|MONOCHROME' -- probably would not want to
+  freetype_load_flags = 'DEFAUlT',
 }
 
 ---@class WindowFrameConfig
@@ -368,10 +368,10 @@ local FontAttributes = {
 ---@field time_to_empty number? If discharing, how long until the battery is empty (in seconds). May be nil.
 ---@field state "Charging" | "Discharging" | "Empty" | "Full" | "Unknown"
 
----@class WeztermPlugin
 ---@class PluginResponse
 ---@field apply_to_config fun(config: Config, ...: any): any Function that accepts at least a config builder parameter, but may pass other parameters, or a lua table with a `config` field that maps to a config build parameter.
 
+---@class WeztermPlugin
 ---@field require fun(url: string): PluginResponse Takes a plugin repo URL (string). This plugin has to return a `apply_to_config` function that accepts at least a config builder parameter
 ---@field list fun(): Plugin[]            -- 'list' function: returns an array of Plugin objects
 ---@field update_all fun(): nil           -- 'update_all' function: performs updates, returns nothing
