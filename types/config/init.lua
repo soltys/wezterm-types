@@ -354,7 +354,7 @@
 ---@field swallow_mouse_click_on_window_focus bool
 ---@field pane_focus_follows_mouse bool
 ---@field unzoom_on_switch_pane bool
----@field max_fps u8
+---@field max_fps u8 Limits the maximum number of frames per second that wezterm will attempt to draw.
 ---@field shape_cache_size usize
 ---@field line_state_cache_size usize
 ---@field line_quad_cache_size usize
@@ -379,68 +379,68 @@
 ---@field ulimit_nofile u64
 ---@field ulimit_nproc u64
 local WeztermConfig = {
-	-- The font size, measured in points
-	font_size = 12.0,
+  -- The font size, measured in points
+  font_size = 12.0,
 
-	-- must be greater than 0
-	line_height = 1.0,
+  -- must be greater than 0
+  line_height = 1.0,
 
-	-- default = "default_one_point_oh_f64"
-	cell_width = 1.0,
+  -- default = "default_one_point_oh_f64"
+  cell_width = 1.0,
 
-	---@type Dimension
-	-- specified by underline_thickness
-	cursor_thickess = 2.0,
+  ---@type Dimension
+  -- specified by underline_thickness
+  cursor_thickess = 2.0,
 
-	---@type Dimension
-	-- specified by font
-	underline_thickness = 2.0,
+  ---@type Dimension
+  -- specified by font
+  underline_thickness = 2.0,
 
-	---@type Dimension
-	underline_position = -2,
+  ---@type Dimension
+  underline_position = -2,
 
-	---@type Dimension
-	strikethrough_position = 2.0,
+  ---@type Dimension
+  strikethrough_position = 2.0,
 
-	---@type "Allow" | "Never" | "WhenFollowedBySpace"
-	allow_square_glyphs_to_overflow_width = "Never",
+  ---@type "Allow" | "Never" | "WhenFollowedBySpace"
+  allow_square_glyphs_to_overflow_width = 'Never',
 
-	---@type WindowDecorations
-	window_decorations = "TITLE | RESIZE",
+  ---@type WindowDecorations
+  window_decorations = 'TITLE | RESIZE',
 
-	---@type IntegratedTitleButton[]
-	integrated_title_buttons = { "Hide", "Maximize", "Close" },
+  ---@type IntegratedTitleButton[]
+  integrated_title_buttons = {'Hide', 'Maximize', 'Close'},
 
-	log_unknown_escape_sequences = false,
+  log_unknown_escape_sequences = false,
 
-	---@type IntegratedTitleButtonAlignment
-	integrated_title_button_alignment = "Right",
+  ---@type IntegratedTitleButtonAlignment
+  integrated_title_button_alignment = 'Right',
 
-	---@type IntegratedTitleButtonStyle
-	-- default is MacOsNative no Mac, Windows on all others
-	integrated_title_button_style = "Windows",
+  ---@type IntegratedTitleButtonStyle
+  -- default is MacOsNative no Mac, Windows on all others
+  integrated_title_button_style = 'Windows',
 
-	-- Auto or custom color like "red"
-	integrated_title_button_color = "Auto",
+  -- Auto or custom color like "red"
+  integrated_title_button_color = 'Auto',
 
-	-- When using FontKitXXX font systems, a set of directories to search ahead of the standard font locations for fonts.
-	-- Relative paths are taken to be relative to the directory from which the config was loaded.
-	-- This tells wezterm to look first for fonts in the directory named `fonts` that is found alongside your `wezterm.lua` file.
-	-- As this option is an array, you may list multiple locations if you wish.
-	font_dirs = { "fonts" },
-	color_scheme_dirs = { "colorschemes" },
+  -- When using FontKitXXX font systems, a set of directories to search ahead of the standard font locations for fonts.
+  -- Relative paths are taken to be relative to the directory from which the config was loaded.
+  -- This tells wezterm to look first for fonts in the directory named `fonts` that is found alongside your `wezterm.lua` file.
+  -- As this option is an array, you may list multiple locations if you wish.
+  font_dirs = {'fonts'},
+  color_scheme_dirs = {'colorschemes'},
 
-	-- The DPI to assume
-	-- Override the detected DPI (dots per inch) for the display.
-	-- This can be useful if the detected DPI is inaccurate and the text appears either blurry or too small (especially if you are using a 4K display on X11 or Wayland).
-	-- The default value is system specific:
-	dpi = 96,
+  -- The DPI to assume
+  -- Override the detected DPI (dots per inch) for the display.
+  -- This can be useful if the detected DPI is inaccurate and the text appears either blurry or too small (especially if you are using a 4K display on X11 or Wayland).
+  -- The default value is system specific:
+  dpi = 96,
 
-	---@type BoldBrightening
-	-- When true ("BrightAndBold"), PaletteIndex 0-7 are shifted to bright when the font intensity is bold.
-	-- The brightening doesn't apply to text that is the default color.
-	-- can also use true or false for backwards compatibility
-	bold_brightens_ansi_colors = "BrightAndBold",
+  ---@type BoldBrightening
+  -- When true ("BrightAndBold"), PaletteIndex 0-7 are shifted to bright when the font intensity is bold.
+  -- The brightening doesn't apply to text that is the default color.
+  -- can also use true or false for backwards compatibility
+  bold_brightens_ansi_colors = 'BrightAndBold',
 }
 
 -- TODO: finish less commonly used conig options (maybe set the defaults, might be too much time)
