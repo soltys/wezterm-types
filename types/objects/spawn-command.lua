@@ -24,7 +24,7 @@
 ---@field set_environment_variables { [string]: string }?
 -- Sets addditional environment variables in the environment for
 -- this command invocation.
----@field domain { DomainName: string }
+---@field domain { DomainName: string }?
 -- Specify a named multiplexer domain that should be used to spawn
 -- this new command.
 -- This is useful if you want to assign a hotkey to always start
