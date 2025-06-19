@@ -12,7 +12,7 @@
 ---@field Gradient Gradient Generate a gradient
 
 ---@class ColorSource
----@field Color {Color: AnsiColor | HexColor} Generate an image with the specified color.
+---@field Color AnsiColor | HexColor Generate an image with the specified color.
 
 ---@class BackgroundLayer
 ---@field source FileSource | FileSourceWithPath | GradientSource | ColorSource Defines the source of the layer texture data.
